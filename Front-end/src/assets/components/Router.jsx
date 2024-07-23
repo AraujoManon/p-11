@@ -6,17 +6,20 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import User from "./pages/User";
 
+
 const Router = () => {
-    return (
-      <BrowserRouter> 
+  return (
+    <BrowserRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/User" element={<User />} />
+ 
       </Routes>
-      <Footer /> </BrowserRouter>
-    );
-  };
-  
-  export default Router;
+      <Footer />
+    </BrowserRouter>
+  );
+};
+
+export default Router;
