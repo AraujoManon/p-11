@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -14,6 +15,12 @@ const Header = () => {
     navigate("/");
   };
 
+=======
+import React from "react";
+import { NavLink } from "react-router-dom";
+import logo from "../images/argentBankLogo.png";
+const Header = () => {
+>>>>>>> e80cfee4364e57c2a803bf2fbf0b11666d0ebd05
   return (
     <header>
       <nav className="main-nav">
@@ -25,6 +32,7 @@ const Header = () => {
           />
         </NavLink>
         <div>
+<<<<<<< HEAD
           {userToken ? (
             <div className="main-nav-item-out" onClick={handleLogout}>
               <i className="fa fa-user-circle"></i>
@@ -38,6 +46,12 @@ const Header = () => {
               Sign In
             </NavLink>
           )}
+=======
+          <NavLink className="main-nav-item" to="/login">
+            <i className="fa fa-user-circle"></i>
+            Sign In
+          </NavLink>
+>>>>>>> e80cfee4364e57c2a803bf2fbf0b11666d0ebd05
         </div>
       </nav>
     </header>

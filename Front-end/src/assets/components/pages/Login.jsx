@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Button } from '../Buttons';
 import { useDispatch, useSelector } from 'react-redux';
@@ -29,12 +30,22 @@ export const Login = () => {
       navigate('/user'); 
     }
   }, [success, navigate]);
+=======
+
+
+import React from 'react';
+import { Button } from '../Buttons'; 
+
+export const Login = () => {
+ 
+>>>>>>> e80cfee4364e57c2a803bf2fbf0b11666d0ebd05
 
   return (
     <main className="main bg-dark">
       <section className="sign-in-content">
         <i className="fa fa-user-circle sign-in-icon"></i>
         <h1>Sign In</h1>
+<<<<<<< HEAD
 
         {error && <p className="error-message">{error}</p>}
         {success && <p className="success-message">Login Successful!</p>}
@@ -73,6 +84,26 @@ export const Login = () => {
             text={loading ? 'Signing In...' : 'Sign In'}
             type="submit"
             disabled={loading}
+=======
+        
+        <form>
+          <div className="input-wrapper">
+            <label htmlFor="username">Username</label>
+            <input type="text" id="username" />
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="password">Password</label>
+            <input type="password" id="password" />
+          </div>
+          <div className="input-remember">
+            <input type="checkbox" id="remember-me" />
+            <label htmlFor="remember-me">Remember me</label>
+          </div>
+          <Button 
+            text="Sign In"
+            to={'/user'}
+
+>>>>>>> e80cfee4364e57c2a803bf2fbf0b11666d0ebd05
           />
         </form>
       </section>
