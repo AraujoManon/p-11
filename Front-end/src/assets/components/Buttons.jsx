@@ -13,11 +13,7 @@ const Button = ({ text = 'Click Me', onClick = () => {}, to, className }) => {
 
   return (
     <button
-<<<<<<< HEAD
       type="submit"
-=======
-      type="button"
->>>>>>> e80cfee4364e57c2a803bf2fbf0b11666d0ebd05
       className={className} 
       onClick={handleClick}
     >
