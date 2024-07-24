@@ -21,6 +21,10 @@
     text-decoration: none;
     margin-right: 0.5rem;
   }
+  .main-nav-item-out {
+   font-weight: bold;
+  
+  }
 
   .main-nav-item:hover {
     text-decoration: underline;
@@ -35,3 +39,7 @@
     max-width: 100%;
     width: 200px;
   }
+.fa-sign-out{
+  margin-left: 10px;
+}
+
