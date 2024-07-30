@@ -1,30 +1,29 @@
-
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Wrapper from '../Wrappers';
 import { Button } from '../Buttons';
 import Modal from '../Modal';
+import { selectIsModalOpen, openModal, closeModal } from '../../../redux/reducers/ModalSlice';
+import { selectUserInfo } from '../../../redux/reducers/AuthSlice';
 
 export const User = () => {
-  const { userInfo } = useSelector((state) => state.auth);
-  const [isModalOpen, setModalOpen] = useState(false);
-
-  const openModal = () => setModalOpen(true);
-  const closeModal = () => setModalOpen(false);
+  const dispatch = useDispatch();
+  const isModalOpen = useSelector(selectIsModalOpen);
+  const userInfo = useSelector(selectUserInfo);
 
   return (
     <>
       <main className={`main ${isModalOpen ? 'bg-light' : 'bg-dark'}`}>
-        <Modal isOpen={isModalOpen} onClose={closeModal} />
+        <Modal isOpen={isModalOpen} onClose={() => dispatch(closeModal())} />
         {!isModalOpen && (
           <>
             <div className="header">
               <h1>
                 Welcome back
                 <br />
-                {userInfo ? `${userInfo.userName}` : 'User'}
+                {userInfo ? userInfo.userName : 'User'}
               </h1>
-              <Button className="edit-button" text="Edit Name" onClick={openModal} />
+              <Button className="edit-button" text="Edit Name" onClick={() => dispatch(openModal())} />
             </div>
             <h2 className="sr-only">Accounts</h2>
             <Wrapper

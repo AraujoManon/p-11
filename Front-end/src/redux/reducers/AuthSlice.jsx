@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { loginUser, getUserProfile, updateUserProfile } from './AuthActions'; 
+import { loginUser, getUserProfile, updateUserProfile } from './AuthActions';
+
 const initialState = {
   loading: false,
   userInfo: JSON.parse(localStorage.getItem('userInfo')) || null,
@@ -74,4 +75,8 @@ const authSlice = createSlice({
 });
 
 export const { logoutUser } = authSlice.actions;
+
+export const selectIsAuth = (state) => !!state.auth.userToken;
+export const selectUserInfo = (state) => state.auth.userInfo;
+
 export default authSlice.reducer;

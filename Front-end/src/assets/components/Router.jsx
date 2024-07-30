@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import User from "./pages/User";
-
+import PrivateRoute from "./PrivateRoute";
 
 const Router = () => {
   return (
@@ -14,7 +14,10 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/user" element={<User />} />
+        <Route
+          path="/user"
+          element={<PrivateRoute element={User} />}
+        />
       </Routes>
       <Footer />
     </BrowserRouter>

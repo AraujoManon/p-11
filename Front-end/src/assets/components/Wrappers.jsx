@@ -17,7 +17,7 @@ const Wrapper = ({ title, amount, amountDescription, inModal = false }) => {
           className="transaction-button"
         />
       </div>
-      {inModal && <i class="fa fa-angle-right"></i>}
+      {inModal && <i className="fa fa-angle-right"></i>}
     </section>
   );
 };
