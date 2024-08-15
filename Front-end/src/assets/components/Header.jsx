@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import logo from "../images/argentBankLogo.png";
+import logo from "../images/argentBankLogo.webp";
 import { logoutUser } from "../../redux/reducers/AuthSlice";
 import { selectIsModalOpen, closeModal } from "../../redux/reducers/ModalSlice";
-import greenLogo from "../images/ArgentBankGreen.png";
+import greenLogo from "../images/ArgentBankGreen.webp";
 
 const Header = () => {
   const dispatch = useDispatch();
